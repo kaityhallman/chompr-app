@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151130160422) do
+ActiveRecord::Schema.define(version: 20151201172950) do
 
   create_table "profiles", force: :cascade do |t|
     t.string   "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20151130160422) do
     t.string   "avatar"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,6 +39,18 @@ ActiveRecord::Schema.define(version: 20151130160422) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "username"
+    t.string   "name"
+    t.string   "location"
+    t.integer  "age"
+    t.string   "food_choice"
+    t.text     "bio"
+    t.string   "interested_in"
+    t.string   "avatar"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
