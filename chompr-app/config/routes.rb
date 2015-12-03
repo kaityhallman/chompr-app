@@ -11,6 +11,11 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'profiles#index'
 
+  # mailbox routes
+  get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
+  get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
+  get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
