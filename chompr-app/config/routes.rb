@@ -15,4 +15,14 @@ Rails.application.routes.draw do
       post :untrash
     end
   end
+
+
+resources :welcome do 
+  member do
+    put "like", to: "welcome#upvote"
+    put "dislike", to: "welcome#downvote"
+  end
+end
+
+
 end
