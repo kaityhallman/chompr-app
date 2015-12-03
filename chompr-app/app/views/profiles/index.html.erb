@@ -1,5 +1,17 @@
-<h1>All Users<h1/>
+<h1>All Users</h1>
 <% @users.each do |user| %>
+<% if user.id == current_user.id %>
+<div class="hidden"></div>
+<% else %>
+  <% if current_user.food_choice == user.food_choice %>
   <%= user.username %> <br />
-  <%= user.location %>
+  <%= user.name %><br>
+  <%= user.location %><br>
+  <%= user.age %><br>
+  <%= user.food_choice %><br>
+  <%= user.bio %><br>
+  <%= user.interested_in %><br>
+  <%= image_tag user.avatar %><br><br>
+  <% end %>
+<% end %>
 <% end %>
