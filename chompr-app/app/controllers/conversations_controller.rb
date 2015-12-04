@@ -2,7 +2,6 @@ class ConversationsController < ApplicationController
   before_action :authenticate_user!
 
   def new
-    @users = User.all
   end
 
   def create

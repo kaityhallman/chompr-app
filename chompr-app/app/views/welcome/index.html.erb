@@ -1,35 +1,15 @@
-<h3><strong>Your food choice:</strong> <%= current_user.food_choice %><br>
-Here are your matches!</h3>
-<br>
+<h3>So your favorite food is <%= current_user.food_choice %>... Here are some matches for you!</h3>
 <% @users.each do |user| %>
-	<% if user.id == current_user.id || user.interested_in == current_user.interested_in %>
-		<div class="hidden"></div>
-
-	<% else %>
-
-		<% if current_user.food_choice == user.food_choice %>
-		<%= image_tag user.avatar(:medium) %><br>
-		<h3><%= user.username %></h3>
-		<%= user.name %>, <%= user.age %><br>
-		<%= user.location %><br>
-		<p>Fun Fact: <%= user.bio %> | Interested in: <%= user.interested_in %></p>
-
-		<%= link_to like_welcome_path(user), method: :put do %>
-			<button type="button" class="btn btn-default">
-			<span class="glyphicon glyphicon-cutlery"></span>
-			</button>
-		<% end %>
-
-		<%= link_to dislike_welcome_path(user), method: :put do %>
-			<button type="button" class="btn btn-default">
-			<span class="glyphicon glyphicon-remove"></span>
-			</button>
-		<br><br>
-		<% end %>
-
-
-		<% end %>
-
-	<% end %>
-
+<% if user.id == current_user.id || user.interested_in == current_user.interested_in %>
+<div class="hidden"></div>
+<% else %>
+  <% if current_user.food_choice == user.food_choice %>
+  <%= image_tag user.avatar(:medium) %><br>
+  <h3><%= user.username %></h3>
+  <%= user.name %>, <%= user.age %><br>
+  <%= user.location %><br>
+  <p>Fun Fact: <%= user.bio %> | Interested in: <%= user.interested_in %></p><br>
+  <br>
+  <% end %>
+<% end %>
 <% end %>
