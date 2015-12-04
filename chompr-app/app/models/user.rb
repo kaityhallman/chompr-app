@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
 
   belongs_to :welcome
 
+  acts_as_votable
   acts_as_messageable
 
   def mailboxer_name
