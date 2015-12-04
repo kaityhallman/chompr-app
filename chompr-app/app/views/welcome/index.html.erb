@@ -1,4 +1,4 @@
-<h3>So your favorite food is <%= current_user.food_choice %>... Here are some matches for you!</h3>
+<h3>So your favorite food is <%= current_user.food_choice %>... Here are some matches for you! twinkly</h3>
 <% @users.each do |user| %>
 <% if user.id == current_user.id || user.interested_in == current_user.interested_in %>
 <div class="hidden"></div>
