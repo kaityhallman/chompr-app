@@ -8,6 +8,15 @@ class ApplicationController < ActionController::Base
 
   before_action :authenticate_user!
 
+  rescue_from ActiveRecord::RecordInvalid do
+  flash[:warning] = 'Your message has not been sent.'
+  redirect_back_or root_path
+  end
+
+  def redirect_back_or(path)
+    redirect_to request.referer || path
+  end
+
   private
 
   def mailbox

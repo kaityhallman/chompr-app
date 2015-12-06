@@ -11,14 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151204220246) do
+ActiveRecord::Schema.define(version: 20151204225818) do
 
   create_table "conversations", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "cpnversations", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
