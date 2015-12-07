@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   rescue_from ActiveRecord::RecordInvalid do
-  flash[:warning] = 'Your message has not been sent.'
+  flash[:warning] = 'Your message has not been sent. Please make sure no fields are left blank.'
   redirect_back_or root_path
   end
 
