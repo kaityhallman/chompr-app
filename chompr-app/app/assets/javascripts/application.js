@@ -15,29 +15,3 @@
 //= require chosen-jquery
 //= require turbolinks
 //= require_tree .
-
-
-
-$(document).ready(function () {
-var yesClicks = 0;
-$('#button1').click(function(){
-    if(yesClicks == 0 || yesClicks % 2 == 0){
-        $("#button1").css("background-color", "green");
-    }else{
-        $("#button1").css("background-color", "white");
-    }
-    ++yesClicks;
-})
-
-var noClicks = 0;
-$('#button2').click(function(){
-    if(noClicks == 0 || noClicks % 2 == 0){
-        $("#button2").css("background-color", "red");
-    }else{
-        $("#button2").css("background-color", "white");
-    }
-    ++noClicks;
-})
-
-});
-

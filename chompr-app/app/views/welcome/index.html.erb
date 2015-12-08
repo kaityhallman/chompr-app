@@ -8,7 +8,7 @@
 			<br>
 			<div class="panel-body">
 				<div class="row">
-					<% @users.each do |user| %>
+					<% @users.each_with_index do |user, index| %>
 						<div class="col-md-6" id="matches">
 						<% if user.id == current_user.id || user.interested_in == current_user.interested_in %>
 						<div class="hidden"></div>
@@ -23,22 +23,19 @@
 							<%= user.location %><br>
 							<p>Fun Fact: <%= user.bio %> | Interested in: <%= user.interested_in %></p>
 
+							<button type="button" class="btn btn-default like-button"><span class="glyphicon glyphicon-cutlery"></span></button>
 
-								<button type="button" id="button1" class="btn btn-default"><span class="glyphicon glyphicon-cutlery"></span>
-								</button>
-
-							<button type="button" id="button2" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>
+							<button type="button" class="btn btn-default dislike-button"><span class="glyphicon glyphicon-remove"></span></button>
 							<br><br>
 							</div>
 
-							
 
 
 							<% end %>
 
 						<% end %>
-
 						</div>
+
 					<% end %>
 				</div>
 			</div>
