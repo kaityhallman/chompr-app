@@ -23,20 +23,15 @@
 							<%= user.location %><br>
 							<p>Fun Fact: <%= user.bio %> | Interested in: <%= user.interested_in %></p>
 
-							<%= link_to like_welcome_path(user), method: :put do %>
-								<button type="button" class="btn btn-default">
-								<span class="glyphicon glyphicon-cutlery"></span>
-								</button>
-							<% end %>
 
-							<%= link_to dislike_welcome_path(user), method: :put do %>
-							
-								<button type="button" class="btn btn-default">
-								<span class="glyphicon glyphicon-remove"></span>
+								<button type="button" id="button1" class="btn btn-default"><span class="glyphicon glyphicon-cutlery"></span>
 								</button>
+
+							<button type="button" id="button2" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>
 							<br><br>
-							<% end %>
 							</div>
+
+							
 
 
 							<% end %>
