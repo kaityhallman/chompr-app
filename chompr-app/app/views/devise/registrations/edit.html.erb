@@ -45,14 +45,14 @@
       <%= f.text_field :age, class: "form-control" %>
     </div>
 
-    <div class="food_choice">
+   <div class="food_choice">
       <%= f.label :food_choice %>
-      <%= f.text_field :food_choice, class: "form-control" %>
+      <%= f.select :food_choice, ['Pizza', 'Tacos', 'Tapas', 'Vegetarian', 'Sushi', 'Burgers'], {}, {class: "form-control"} %>
     </div>
 
     <div class="interested_in">
       <%= f.label :interested_in %>
-      <%= f.text_field :interested_in, class: "form-control" %>
+      <%= f.select :interested_in, ['Men', 'Women'], {}, {class: "form-control"} %>
     </div>
 
     <div class="bio">
