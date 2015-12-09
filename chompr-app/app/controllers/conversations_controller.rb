@@ -35,11 +35,20 @@ class ConversationsController < ApplicationController
     redirect_to mailbox_inbox_path
   end
 
+    rescue_from ActiveRecord::RecordNotFound do
+  flash[:warning] = 'Resource not found.'
+  redirect_back_or root_path
+  end
+
+  def redirect_back_or(path)
+    redirect_to request.referer || path
+  end
+
 
   private
 
   def conversation_params
-    params.require(:conversation).permit(:subject, :body,recipients:[])
+    params.require(:conversation).permit(:subject, :body, recipients:[])
   end
 
   def message_params
