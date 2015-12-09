@@ -22,3 +22,18 @@
 }
 */
 
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand>img {
+	display: inline-block;
+}
+
+.navbar-inverse .navbar-brand {
+	color:#d9534f;
+}
+
+.form-control {
+	width: 75%;
+}

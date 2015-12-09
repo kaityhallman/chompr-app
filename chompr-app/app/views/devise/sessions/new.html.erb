@@ -6,21 +6,31 @@ body {
   -o-background-size: cover;
   background-size: cover;
   margin: 20px;
-  padding: 20px;
+  padding: 60px;
 }
 
 .jumbotron {
-  background-color: black;
+  background-color: rgba(0,0,0,0.8);
   color:white;
 }
 
+.jumbotron h1 {
+
+  color:#d9534f;
+}
+
+
+.login {
+  margin:0 auto;
+}
+
 h2 {
-  color:white;
+  color:#d9534f;
   position: center;
 }
 .form-group {
-  color: white;
-  position: center;
+  color:white;
+
 }
 
 a {
@@ -35,11 +45,12 @@ a:hover {
 
 <div class="jumbotron">
   <div class="container">
-  <h1>Chompr.</h1>
+    <a href='http://postimage.org/' target='_blank'><img src='http://s28.postimg.org/5z84bjq8p/teethlogo.png' border='0' alt="teethlogo" /></a>
+  <h1>Chompr</h1>
   <p>The way to their heart is through their stomach.</p>
 </div>
 </div>
-
+<center>
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -63,3 +74,5 @@ a:hover {
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</center>
