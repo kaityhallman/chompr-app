@@ -22,10 +22,22 @@
     min-height: 0px;
 	}
 
-	#matches {
-		text-align: center;
-	}
+#matches {
+	text-align: center;
+}
 
-	.thumbnail {
-		padding-top: 5%;
-	}
+.thumbnail {
+	padding-top: 5%;
+}
+
+.btn-default.nil-click {
+	background-color: white;
+}
+
+.btn-default.yes-click {
+	background-color: green;
+}
+
+.btn-default.no-click {
+	background-color: red;
+}
